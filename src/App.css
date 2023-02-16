@@ -1,8 +1,9 @@
 .App {
-  margin-top: 50px;
+    margin-top: 10px;
    display: flex;
    justify-content: center;
    align-items: center;
+   flex-direction: column;
   }
   .container {
     padding: 10px 15px;
@@ -17,7 +18,7 @@
     height: 500px;
     margin: auto;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+   
     box-shadow: 10px 11px 5px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 10px 11px 5px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 10px 11px 5px 0px rgba(0, 0, 0, 0.75);
@@ -45,4 +46,13 @@
     margin: 10px;
     height: max-content;
     width: max-content;
+}
+input{
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    width: 200px;
+    font-size: 20px;
+}
+.massage{
+    color: green;
 }

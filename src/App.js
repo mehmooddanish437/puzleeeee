@@ -18,7 +18,7 @@ function App() {
 
 
   const handelChnage = (event) => {
-    setinputNumber(parseInt(event.target.value))
+    setinputNumber(event.target.value)
   }
 
   const [puzzleNumbers, setPuzzleNumbers] = useState(handelNumber(numberArray));
@@ -46,7 +46,9 @@ function App() {
   return (
     <div className="App">
       <input type="number" value={inputNumber} placeholder='Enter Number' onChange={(event) => handelChnage(event)} />
-      {inputNumber === 3 ? <div className="board">
+      {inputNumber && <div className="board" style={{gridTemplateColumns:`repeat(${inputNumber}, 1fr)`,
+    gridTemplateRows:`repeat(${inputNumber}, 1fr)`
+    }}>
         {puzzleNumbers.map((number, index) => (
           <div
             draggable={true}
@@ -60,7 +62,7 @@ function App() {
           </div>
         ))}
 
-      </div> : null}
+      </div> }
     { isSolved && <div className='massage'>
         <h1>!! Puzzle solved !!</h1>
       </div>} 
